@@ -41,17 +41,17 @@ const navMenuItems: MenuItem[] = [
   { title: "Home", url: "/" },
   {
     title: "About",
-    url: "#", // The main "About" itself might not link if it's just a trigger
+    url: "/about", // The main "About" itself might not link if it's just a trigger
     items: [
       {
-        title: "Our Story",
-        url: "/about/story",
-        description: "Discover our journey and values.",
+        title: "About",
+        url: "/about",
+        description: ".",
       },
       {
         title: "Team",
         url: "/about/team",
-        description: "Meet the innovators.",
+        description: "",
       },
     ],
   },
@@ -173,14 +173,14 @@ const renderDesktopMenuItem = (item: MenuItem) => {
           className={cn(
             navigationMenuTriggerStyle(),
             "bg-transparent",
-            linkClassName,
-            "px-3 py-2"
+            linkClassName
+            // "px-3 py-2"
           )}
         >
           {item.title}
         </NavigationMenuTrigger>
         <NavigationMenuContent>
-          <ul className="grid w-[300px] gap-3 p-4 md:w-[350px] lg:w-[400px]">
+          <ul className="grid w-[300px]  md:w-[350px] lg:w-[300px]">
             {item.items.map((subItem) => (
               <ListItem
                 key={subItem.title}
@@ -198,18 +198,18 @@ const renderDesktopMenuItem = (item: MenuItem) => {
 
   return (
     <NavigationMenuItem key={item.title}>
-      {/* <Link href={`${item.url}`}> */}
-      <NavigationMenuLink
-        className={cn(
-          navigationMenuTriggerStyle(),
-          "bg-transparent",
-          linkClassName,
-          "px-3 py-2"
-        )}
-      >
-        {item.title}
-      </NavigationMenuLink>
-      {/* </Link> */}
+      <Link href={`${item.url}`}>
+        <NavigationMenuLink
+          className={cn(
+            navigationMenuTriggerStyle(),
+            "bg-transparent",
+            linkClassName,
+            "px-3 py-2"
+          )}
+        >
+          {item.title}
+        </NavigationMenuLink>
+      </Link>
     </NavigationMenuItem>
   );
 };
@@ -217,7 +217,7 @@ const renderDesktopMenuItem = (item: MenuItem) => {
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a"> & { title: string } // Ensure title is part of props
->(({ className, title, children, href, ...props }, ref) => {
+>(({ className, title, href, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
@@ -225,15 +225,15 @@ const ListItem = React.forwardRef<
           href={href!}
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-neutral-100 focus:bg-neutral-100",
+            "block select-none space-y-1 rounded-md  leading-none no-underline outline-none transition-colors hover:bg-neutral-100 focus:bg-neutral-100",
             className
           )}
           {...props}
         >
           <div className="text-sm font-semibold text-neutral-800">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-neutral-600">
+          {/* <p className="line-clamp-2 text-sm leading-snug text-neutral-600">
             {children}
-          </p>
+          </p> */}
         </Link>
       </NavigationMenuLink>
     </li>
