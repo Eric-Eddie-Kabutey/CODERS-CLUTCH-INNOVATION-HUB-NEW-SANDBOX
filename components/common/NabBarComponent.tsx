@@ -60,13 +60,28 @@ const navMenuItems: MenuItem[] = [
     url: "#", // The main "Our Pillars" itself might not link
     items: [
       {
-        title: "Pillar 1",
-        url: "/pillars/1",
+        title: "CodeFACTORY",
+        url: "/our-pillers/code-factory",
         description: "Details about our first core pillar.",
       },
       {
-        title: "Pillar 2",
-        url: "/pillars/2",
+        title: "TalentFACTORY",
+        url: "/our-pillers/talentFactory",
+        description: "Exploring the second foundational pillar.",
+      },
+      {
+        title: "CapitalFACTORY",
+        url: "/our-pillers/capitalFactory",
+        description: "Exploring the second foundational pillar.",
+      },
+      {
+        title: "DigitalFACTORY",
+        url: "/our-pillers/digitalFactory",
+        description: "Exploring the second foundational pillar.",
+      },
+      {
+        title: "AccelaratorFACTORY",
+        url: "/our-pillers/accelaratorFactory",
         description: "Exploring the second foundational pillar.",
       },
     ],
