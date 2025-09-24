@@ -1,11 +1,12 @@
-// import Image from "next/image";
-
 import Hero from "@/components/new-landing-page/Hero";
+import React from "react";
 
-export default function Home() {
+const LandingPage = () => {
   return (
     <div>
       <Hero />
     </div>
   );
-}
+};
+
+export default LandingPage;
