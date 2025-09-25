@@ -12,7 +12,7 @@ const Hero = () => {
             </p>
 
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight text-gray-900">
-              Where Ideas Spark <br />
+              Where <span className="font-serif italic font-bold text-[#111828]"> Ideas Spark</span>  <br />
               And Futures are Built
             </h1>
 
@@ -36,7 +36,7 @@ const Hero = () => {
 
             <div className="space-y-3">
               <div className="overflow-hidden">
-                <div className="flex -space-x-3 animate-slide-slow">
+                <div className="flex -space-x-3 ">
                   {[...Array(5)].map((_, i) => (
                     <div
                       key={i}

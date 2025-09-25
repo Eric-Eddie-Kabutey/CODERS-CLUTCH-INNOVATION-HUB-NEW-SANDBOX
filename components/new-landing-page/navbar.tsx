@@ -22,7 +22,7 @@ import { cn } from "@/lib/utils";
 
 interface MenuItem {
   title: string;
-  url: string; // required
+  url: string;
   description?: string;
   items?: MenuItem[];
 }
@@ -59,29 +59,28 @@ const defaultLogo = {
   alt: "Bluespace Innovation Hub Logo",
 };
 
-const ctaButton = { title: "Financial Cloud", url: "/financial-cloud" };
-
 const NewNavbar: React.FC = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-[900px] rounded-xl border bg-white shadow-sm">
-      <div className="flex h-12 items-center justify-between px-6 md:px-10 lg:px-12">
+    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-[1200px] rounded-xl border bg-white shadow-md">
+      {/* Navbar Container */}
+      <div className="flex items-center justify-between h-20 px-6 md:px-10 lg:px-12">
         {/* Logo */}
-        <Link href={defaultLogo.url} className="flex-shrink-0">
+        <Link href={defaultLogo.url} className="flex items-center">
           <Image
             src={defaultLogo.src}
             alt={defaultLogo.alt}
             width={140}
             height={48}
-            className="h-6 sm:h-8 w-auto"
+            className="h-10 w-auto"
             priority
           />
         </Link>
 
         {/* Desktop Menu */}
-        <NavigationMenu className="hidden lg:flex flex-grow justify-center ml-4">
-          <NavigationMenuList className="space-x-4">
+        <NavigationMenu className="hidden lg:flex flex-grow justify-center">
+          <NavigationMenuList className="flex space-x-6">
             {navMenuItems.map((item) => (
               <React.Fragment key={item.title}>
                 {renderDesktopMenuItem(item)}
@@ -103,22 +102,16 @@ const NewNavbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Popup */}
+      {/* Mobile Menu */}
       <div
         id="mobile-menu"
         className={cn(
-          "lg:hidden absolute top-16 right-4 w-[85%] max-w-sm bg-green-600 text-white rounded-xl shadow-xl overflow-hidden transform origin-top-right transition-all duration-700 ease-in-out",
+          "lg:hidden absolute top-20 right-4 w-[85%] max-w-sm bg-green-600 text-white rounded-xl shadow-xl overflow-hidden transform origin-top-right transition-all duration-300 ease-in-out",
           isMobileOpen ? "scale-100 opacity-100 py-4" : "scale-0 opacity-0 py-0"
         )}
       >
         <div className="flex flex-col space-y-3 px-4">
           {navMenuItems.map((item) => renderMobileMenuItem(item))}
-          <Link
-            href={ctaButton.url}
-            className="block bg-green-700 text-center py-2 rounded-md font-medium hover:bg-green-800 transition"
-          >
-            {ctaButton.title}
-          </Link>
         </div>
       </div>
     </header>
@@ -129,21 +122,15 @@ export default NewNavbar;
 
 /* ---------- helpers ---------- */
 
-// Desktop menu item renderer
 const renderDesktopMenuItem = (item: MenuItem) => {
   const linkClassName =
     "text-neutral-700 hover:text-blue-600 transition-colors duration-150 text-sm font-medium";
 
-  // Dropdown
   if (item.items && item.items.length > 0) {
     return (
       <NavigationMenuItem key={item.title}>
         <NavigationMenuTrigger
-          className={cn(
-            navigationMenuTriggerStyle(),
-            "bg-transparent",
-            linkClassName
-          )}
+          className={cn(navigationMenuTriggerStyle(), "bg-transparent", linkClassName)}
         >
           {item.title}
         </NavigationMenuTrigger>
@@ -158,7 +145,6 @@ const renderDesktopMenuItem = (item: MenuItem) => {
     );
   }
 
-  // Plain link
   return (
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
@@ -176,9 +162,8 @@ const renderDesktopMenuItem = (item: MenuItem) => {
   );
 };
 
-// Submenu list items — use a Link directly
 const ListItem = React.forwardRef<
-  HTMLAnchorElement, // ✅ correct ref type
+  HTMLAnchorElement,
   React.ComponentPropsWithoutRef<"a"> & { title: string; href: string }
 >(({ className, title, href, ...props }, ref) => {
   return (
@@ -199,7 +184,6 @@ const ListItem = React.forwardRef<
 });
 ListItem.displayName = "ListItem";
 
-// Mobile menu item renderer
 const renderMobileMenuItem = (item: MenuItem) => {
   if (item.items && item.items.length > 0) {
     return (

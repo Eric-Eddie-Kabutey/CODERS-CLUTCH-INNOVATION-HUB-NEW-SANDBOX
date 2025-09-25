@@ -41,12 +41,12 @@ const WhoWeAre = () => {
       <div className="container mx-auto px-4 py-12 md:py-16">
         <motion.p
           variants={itemVariants}
-          className="text-sm text-gray-500 mb-3"
+          className="text-sm p-8 text-gray-500 mb-3"
         >
           {" // Who We Are"}
         </motion.p>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="grid p-8 md:grid-cols-2 gap-8 items-start">
           {/* Left Column */}
           <motion.div variants={itemVariants}>
             <motion.h1
@@ -55,7 +55,7 @@ const WhoWeAre = () => {
               transition={{ type: "spring", stiffness: 400 }}
             >
               Welcome to <br />
-              <span className="text-[#34cc33]">BlueSPACE Innovation Hub</span>
+              <span className="text-[#34cc33] font-serif italic font-bold">CodersClutch</span>
             </motion.h1>
 
             <motion.p
@@ -101,7 +101,7 @@ const WhoWeAre = () => {
               alt="BlueSPACE Illustration"
               width={970}
               height={970}
-              className="w-full max-w-2xl h-auto object-contain"
+              className="w-full max-w-2xl p-5 h-auto object-contain"
               priority
             />
           </motion.div>
