@@ -1,4 +1,5 @@
 import * as React from "react"
+import Link from "next/link"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { cva } from "class-variance-authority"
 import { ChevronDownIcon } from "lucide-react"
@@ -73,7 +74,7 @@ function NavigationMenuTrigger({
       className={cn(navigationMenuTriggerStyle(), "group", className)}
       {...props}
     >
-      {children}{" "}
+      {children}
       <ChevronDownIcon
         className="relative top-[1px] ml-1 size-3 transition duration-300 group-data-[state=open]:rotate-180"
         aria-hidden="true"
@@ -104,11 +105,7 @@ function NavigationMenuViewport({
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Viewport>) {
   return (
-    <div
-      className={cn(
-        "absolute top-full left-0 isolate z-50 flex justify-center"
-      )}
-    >
+    <div className="absolute top-full left-0 isolate z-50 flex justify-center">
       <NavigationMenuPrimitive.Viewport
         data-slot="navigation-menu-viewport"
         className={cn(
@@ -121,19 +118,36 @@ function NavigationMenuViewport({
   )
 }
 
+/**
+ * NavigationMenuLink
+ * - requires href
+ * - uses Radix `asChild` so Radix won't render an <a>
+ * - uses Next.js Link as the actual anchor
+ */
+type NextLinkProps = Omit<React.ComponentProps<typeof Link>, "href"> & {
+  href: string | URL
+  className?: string
+}
+
+type NavigationMenuLinkProps = NextLinkProps &
+  React.ComponentProps<typeof NavigationMenuPrimitive.Link>
+
 function NavigationMenuLink({
   className,
+  href,
   ...props
-}: React.ComponentProps<typeof NavigationMenuPrimitive.Link>) {
+}: NavigationMenuLinkProps) {
   return (
-    <NavigationMenuPrimitive.Link
-      data-slot="navigation-menu-link"
-      className={cn(
-        "data-[active=true]:focus:bg-accent data-[active=true]:hover:bg-accent data-[active=true]:bg-accent/50 data-[active=true]:text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:ring-ring/50 [&_svg:not([class*='text-'])]:text-muted-foreground flex flex-col gap-1 rounded-sm p-2 text-sm transition-all outline-none focus-visible:ring-[3px] focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
-        className
-      )}
-      {...props}
-    />
+    <NavigationMenuPrimitive.Link asChild>
+      <Link
+        href={href}
+        className={cn(
+          "data-[active=true]:focus:bg-accent data-[active=true]:hover:bg-accent data-[active=true]:bg-accent/50 data-[active=true]:text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:ring-ring/50 [&_svg:not([class*='text-'])]:text-muted-foreground flex flex-col gap-1 rounded-sm p-2 text-sm transition-all outline-none focus-visible:ring-[3px] focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
+          className
+        )}
+        {...props} // ✅ safe now, no `any`
+      />
+    </NavigationMenuPrimitive.Link>
   )
 }
 

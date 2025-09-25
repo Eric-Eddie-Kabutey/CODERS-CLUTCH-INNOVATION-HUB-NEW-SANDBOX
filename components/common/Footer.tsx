@@ -1,16 +1,14 @@
 "use client";
-import React, { useState } from "react";
-import { SendHorizonal } from "lucide-react"; // Assuming this is the icon for "Sign Up"
 
-// Placeholder for the logo image
+import React, { useState } from "react";
+import { SendHorizonal } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
   const [isOkayWithTracking, setIsOkayWithTracking] = useState(false);
 
-  const handleNewsletterSubmit = (
-    e: React.FormEvent<HTMLFormElement>
-  ): void => {
+  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     // Handle newsletter subscription logic here
     console.log({ email, isOkayWithTracking });
@@ -31,10 +29,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8">
           {/* Column 1: Logo and Social */}
           <div className="md:col-span-2 lg:col-span-1">
-            <img
-              src={"/BlueSpace-BIH-1.png"}
+            <Image
+              src="/BlueSpace-BIH-1.png"
               alt="BlueSPACE Innovation Hub"
-              className="h-8 mb-5"
+              width={160}
+              height={48}
+              className="h-8 w-auto mb-5"
+              priority
             />
             <div className="flex space-x-2">
               {socialLinks.map((link) => (
@@ -52,9 +53,7 @@ const Footer = () => {
 
           {/* Column 2: Headquarters */}
           <div>
-            <h5 className="font-bold text-black mb-3 text-base">
-              Headquarters
-            </h5>
+            <h5 className="font-bold text-black mb-3 text-base">Headquarters</h5>
             <p className="font-semibold text-black">BlueSPACE Innovation.</p>
             <p>06 Quarcoo Lane Tech Bureau,</p>
             <p>Airport Residential Accra Ghana</p>
@@ -63,9 +62,7 @@ const Footer = () => {
 
           {/* Column 3: Work Inquiries & Career */}
           <div>
-            <h5 className="font-bold text-black mb-3 text-base">
-              Work inquiries
-            </h5>
+            <h5 className="font-bold text-black mb-3 text-base">Work inquiries</h5>
             <p className="mb-1">Interested in working with us?</p>
             <a
               href="mailto:info@bluespaceinnovationhub.com"
@@ -102,8 +99,7 @@ const Footer = () => {
                   aria-label="Sign Up for newsletter"
                 >
                   <span className="bg-gray-400 text-white p-1 rounded-sm text-xs">
-                    <SendHorizonal size={12} strokeWidth={2} />{" "}
-                    {/* Placeholder icon */}
+                    <SendHorizonal size={12} strokeWidth={2} />
                   </span>
                   <span>Sign Up</span>
                 </button>
@@ -117,12 +113,9 @@ const Footer = () => {
                 onChange={(e) => setIsOkayWithTracking(e.target.checked)}
                 className="mt-1 mr-2 h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
               />
-              <label
-                htmlFor="trackingConsent"
-                className="text-xs text-gray-600"
-              >
-                I&apos;m okay with getting emails and having that activity
-                tracked to improve my experience.
+              <label htmlFor="trackingConsent" className="text-xs text-gray-600">
+                I&apos;m okay with getting emails and having that activity tracked
+                to improve my experience.
               </label>
             </div>
           </div>
@@ -151,23 +144,17 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Fixed Side Elements - These are harder to replicate exactly without knowing how they are implemented globally */}
-      {/* "Scroll" text on left */}
+      {/* Fixed Side Elements */}
       <div className="fixed left-10 top-1/2 -translate-y-1/2 transform -rotate-90 origin-bottom-left hidden lg:block">
-        <span className=" font-bold  text-black tracking-wider">
-          Scroll to top
-        </span>
+        <span className="font-bold text-black tracking-wider">Scroll to top</span>
       </div>
-      {/* "Follow Us" text on right */}
       <div className="fixed right-4 top-1/2 -translate-y-1/2 transform rotate-90 origin-top-right hidden lg:block">
         <span className="text-xs text-gray-400 tracking-wider">
           Follow Us --- Fb. / Ig. / Yt. / X. / Lk.
         </span>
       </div>
-      {/* Placeholder for the Privacy/Terms floating button - This is usually an external widget */}
       <div className="fixed bottom-4 right-4 z-50">
         <button className="bg-white p-2 rounded-md shadow-lg border border-gray-300 hover:shadow-xl transition-shadow">
-          {/* Placeholder for the actual icon - you'd typically use an SVG or an icon from a library */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
