@@ -9,19 +9,19 @@ function Challenges() {
       <div className="w-full rounded-3xl px-6 sm:px-8 md:px-12 lg:px-16 bg-[#0b2027] space-y-16 md:space-y-28 py-12 md:py-16">
 
         {/* Heading */}
-        <div className="text-left mt-6 md:mt-16 space-y-4 md:space-y-6 max-w-4xl">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-snug">
-            We understand your <br />
-            challenges as a <span className="text-orange-500">non-tech founder</span>
-          </h2>
-          <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
-            Building a product from scratch is tough. With over a decade of experience, Kedrus is here to help you tackle tech complexities, fear of failure, communication gaps, decision-making stress, and the sense of isolation.
-          </p>
-        </div>
+        <div className="text-left mt-6 md:mt-16 max-w-full whitespace-nowrap">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-snug">
+          We understand your challenges as a <span className="text-orange-500">non-tech founder</span>
+        </h2>
+        <p className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed">
+          Building a product from scratch is tough. With over a decade of experience, Kedrus is here to help you tackle tech complexities, fear of failure, <br />communication gaps, decision-making stress, and the sense of isolation.
+        </p>
+      </div>
+
 
         {/* Solutions Section */}
         <div className="bg-[#f3fef2] text-black rounded-2xl shadow-lg p-6 sm:p-12 md:p-16 space-y-8 md:space-y-12">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 md:mb-12 leading-tight text-center md:text-left">
+          <h3 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 md:mb-12 leading-tight text-center md:text-left">
             That’s why we’ve designed solutions<br className="hidden md:block" /> to ensure your success.
           </h3>
 
