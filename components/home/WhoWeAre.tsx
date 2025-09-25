@@ -65,7 +65,7 @@ const WhoWeAre = () => {
             >
               We are key to expanding the impact of the{" "}
               <strong className="text-black font-bold">
-                BlueSPACE Financial Cloud (BFC)
+                CodersClutch
               </strong>{" "}
               across Africa and the world.
             </motion.p>
