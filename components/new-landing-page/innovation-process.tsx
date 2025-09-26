@@ -30,7 +30,7 @@ function Innovation() {
 
   return (
     <section className="py-12 sm:py-16 bg-[#ffffff]">
-      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#0b2027] text-white rounded-b-2xl w-full min-h-[auto] flex flex-col justify-between p-4 sm:p-6 md:p-8">
           <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-bold pt-4 sm:pt-6">
             Our 3{" "}

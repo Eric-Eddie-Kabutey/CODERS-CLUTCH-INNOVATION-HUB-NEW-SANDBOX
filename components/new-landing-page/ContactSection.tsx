@@ -5,9 +5,10 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 function ContactSection() {
   return (
-    <section className="w-full  py-20">
-      <div className="max-w-7xl mx-auto  px-6 md:px-12 lg:px-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 bg-[#f0f0f0]  shadow-lg p-12">
+    <section className="w-full py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Uniform Width Container */}
+        <div className="w-full grid md:grid-cols-2 gap-12 bg-[#f0f0f0] shadow-lg p-4 sm:p-6 md:p-8 rounded-3xl">
           {/* Left Side */}
           <div>
             <p className="text-green-600 font-semibold mb-2">Programs</p>
@@ -47,7 +48,7 @@ function ContactSection() {
           </div>
 
           {/* Right Side */}
-          <div className="bg-white p-8 shadow-md">
+          <div className="bg-white p-4 sm:p-6 md:p-8 shadow-md rounded-3xl">
             <h3 className="text-lg font-semibold mb-2">Send us a message</h3>
             <p className="text-gray-600 mb-6">
               Fill out the form below and we&apos;ll get back to you as soon as

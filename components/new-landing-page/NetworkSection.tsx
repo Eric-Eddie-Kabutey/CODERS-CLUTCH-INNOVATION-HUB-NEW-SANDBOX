@@ -2,16 +2,16 @@ import React from "react";
 
 function NetworkSection() {
   return (
-    <section className="w-full bg-black text-white px-6 py-20 flex justify-center">
+    <section className="w-full bg-[#f3fef2] text-white px-6 py-20 flex justify-center">
       <div className="max-w-6xl px-10 w-full">
         {/* Header */}
         <div className="mb-12">
-          <p className="text-green-500 text-sm font-medium mb-2">
+          <p className="text-[#00a63d] text-sm font-medium mb-2">
             Community & Ecosystem
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className="text-4xl text-black md:text-5xl font-bold">
             A Network That Works{" "}
-            <span className="text-gray-400 font-normal">for You</span>
+            <span className="text-black-400 font-normal">for You</span>
           </h2>
         </div>
 
@@ -39,7 +39,7 @@ function NetworkSection() {
 
           {/* Right Content */}
           <div className="flex flex-col justify-center">
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-black mb-6 leading-relaxed">
               When you join the Coders Clutch hub, you tap into a thriving
               ecosystem of founders, investors, researchers, and industry
               experts. Collaboration isn’t just encouraged, it’s built into
@@ -53,7 +53,7 @@ function NetworkSection() {
 
         {/* Bottom Statement */}
         <p className="text-left text-xl md:text-2xl font-medium">
-          <span className="text-white">
+          <span className="text-black">
             We connect visionaries, innovators, and entrepreneurs with the tools,
             mentors, and <br />
           </span>{" "}

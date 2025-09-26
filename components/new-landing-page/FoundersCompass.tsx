@@ -51,9 +51,9 @@ function FoundersCompass() {
       </div>
 
       {/* CTA Button */}
-      <button className="bg-[#34cc33] hover:bg-[#008236] text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition">
-        Check out more insights
-      </button>
+      <button className="bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-md hover:shadow-lg">
+  Check out more insights
+</button>
     </section>
   );
 }
