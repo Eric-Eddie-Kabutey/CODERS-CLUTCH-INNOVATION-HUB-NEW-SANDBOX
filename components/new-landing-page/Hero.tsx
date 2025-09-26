@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="bg-[#f3fef2] pt-36 pb-24">
+    <section className="bg-[#f3fef2] pt-60 pb-24">
       <div className="container mx-auto px-6 sm:px-12 md:px-16 lg:px-[6rem] xl:px-[8rem]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* LEFT SIDE */}

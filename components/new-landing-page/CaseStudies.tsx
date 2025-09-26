@@ -43,7 +43,7 @@ function CaseStudies() {
     setIndex((prev) => (prev - 1 + caseStudies.length) % caseStudies.length);
 
   return (
-    <section className="w-full bg-[#f4f9f4] py-12 flex flex-col items-center">
+    <section className="w-full bg-[#ffffff] py-12 flex flex-col items-center">
       <h2 className="text-3xl font-bold mb-10">Case Studies</h2>
 
       <div className="relative w-full max-w-6xl overflow-hidden">

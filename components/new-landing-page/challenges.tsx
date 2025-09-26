@@ -6,7 +6,7 @@ function Challenges() {
   return (
     <section className="mx-auto px-4 sm:px-6 md:px-10 border-gray-300 lg:px-25 py-12 sm:py-16 bg-[#ffffff] text-white rounded-3xl">
       {/* Inner container */}
-      <div className="w-full rounded-3xl px-6 sm:px-8 md:px-12 lg:px-16 bg-[#0b2027] space-y-16 md:space-y-28 py-12 md:py-16">
+      <div className="w-full rounded-tl-4xl rounded-tr-4xl px-6 sm:px-8 md:px-12 lg:px-16 bg-[#0b2027] space-y-16 md:space-y-28 py-12 md:py-16">
 
         {/* Heading */}
         <div className="text-left mt-6 md:mt-16 max-w-full whitespace-nowrap">
