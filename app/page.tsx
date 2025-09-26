@@ -23,13 +23,12 @@ export default function Home() {
       <WhoWeAre />
       <Challenges />
       <CaseStudies />
-      <WhatClientSays />
-      <Covered />
-      <Innovation />
-      <Organization />
-      <FoundersCompass />
       <NetworkSection />
       <Events />
+      
+      <Organization />
+      <FoundersCompass />
+      <Innovation />
       <Testimonials />
       <ContactSection />
       <NewFooter />
