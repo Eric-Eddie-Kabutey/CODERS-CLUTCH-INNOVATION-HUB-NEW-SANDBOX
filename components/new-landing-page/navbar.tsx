@@ -28,7 +28,6 @@ interface MenuItem {
 }
 
 const navMenuItems: MenuItem[] = [
-  { title: "Home", url: "/" },
   {
     title: "About",
     url: "/about",
@@ -37,6 +36,7 @@ const navMenuItems: MenuItem[] = [
       { title: "Team", url: "/about/team" },
     ],
   },
+
   {
     title: "Our Pillars",
     url: "/our-pillars",
@@ -48,8 +48,16 @@ const navMenuItems: MenuItem[] = [
       { title: "AcceleratorFACTORY", url: "/our-pillars/accelerator-factory" },
     ],
   },
-  { title: "News", url: "/news" },
-  { title: "Impact Report", url: "/impact-report" },
+  { title: "Services", url: "/services" },
+  {
+    title: "Insight",
+    url: "/insight",
+    items: [
+      { title: "News", url: "/#" },
+      { title: "Impact Report", url: "/impact-report" },
+    ],
+  },
+
   { title: "Contact", url: "/contact" },
 ];
 
