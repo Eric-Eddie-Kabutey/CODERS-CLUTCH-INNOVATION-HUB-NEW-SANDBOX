@@ -12,7 +12,11 @@ const Hero = () => {
             </p>
 
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight text-gray-900">
-              Where <span className="font-serif italic font-bold text-[#111828]"> Ideas Spark</span>  <br />
+              Where{" "}
+              <span className="font-serif italic font-bold text-[#111828]">
+                Ideas Spark
+              </span>{" "}
+              <br />
               And Futures are Built
             </h1>
 
@@ -27,7 +31,7 @@ const Hero = () => {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="space-y-6 lg:pl-11"> {/* Added lg:pl-8 to move right-side content slightly right */}
+          <div className="space-y-6 lg:pl-11">
             <p className="text-gray-800 text-base leading-relaxed">
               Empowering entrepreneurs, startups, and changemakers <br />
               with the tools, mentorship, and community they need <br />
@@ -36,7 +40,7 @@ const Hero = () => {
 
             <div className="space-y-3">
               <div className="overflow-hidden">
-                <div className="flex -space-x-3 ">
+                <div className="flex -space-x-3">
                   {[...Array(5)].map((_, i) => (
                     <div
                       key={i}
@@ -58,7 +62,7 @@ const Hero = () => {
             {[...Array(8)].map((_, i) => (
               <div
                 key={i}
-                className="min-w-[350px] h-56 bg-gray-200 rounded-2xl flex-shrink-0"
+                className="min-w-[400px] h-72 bg-[#d9d9d9]/50 backdrop-blur-md border border-[#d9d9d9]/40 rounded-2xl flex-shrink-0 shadow-md"
               />
             ))}
           </div>

@@ -54,7 +54,7 @@ const events = [
 function Events() {
   return (
     <section className="w-full bg-gradient-to-br from-gray-50 to-white py-24 px-4">
-      <div className="max-w-7xl p-15 mx-auto  border-2 border-black bg-black rounded-tl-3xl">
+      <div className="max-w-7xl p-15 mx-auto  border-2 border-black bg-black rounded-tr-3xl">
         {/* Top Section - Improved alignment */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
           <div className="space-y-6">
