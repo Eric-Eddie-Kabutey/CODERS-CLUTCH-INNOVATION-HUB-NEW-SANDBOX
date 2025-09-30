@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 function FoundersInsight() {
   return (
@@ -15,12 +16,15 @@ function FoundersInsight() {
 
           {/* Main Card */}
           <div className="w-full bg-gradient-to-br from-[#e6f6d2] to-[#d4f0c3] rounded-2xl overflow-hidden flex flex-col md:flex-row mb-10 shadow-lg hover:shadow-xl transition-all duration-300">
+            
             {/* Left Image */}
-            <div className="w-full md:w-1/2 relative">
-              <img
+            <div className="w-full md:w-1/2 relative h-80 md:h-auto">
+              <Image
                 src="https://kedrus.io/wp-content/uploads/2025/01/chllenge-.jpeg"
                 alt="Motivation"
                 className="w-full h-full object-cover rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none transition-transform duration-300 hover:scale-105"
+                layout="fill"
+                objectFit="cover"
               />
             </div>
 
@@ -38,7 +42,7 @@ function FoundersInsight() {
 
               {/* Description */}
               <p className="text-gray-700 mb-8 leading-relaxed text-base md:text-lg">
-                Starting a business as a non-tech founder is brave, no doubt about it. You're stepping into
+                Starting a business as a non-tech founder is brave, no doubt about it. You&apos;re stepping into
                 unfamiliar territory, learning new skills, and pushing through obstacles that test your resolve daily.
               </p>
 

@@ -30,13 +30,12 @@ interface MenuItem {
 const navMenuItems: MenuItem[] = [
   {
     title: "About",
-    url: "/about",
+    url: "/#",
     items: [
-      { title: "About", url: "/about" },
-      { title: "Team", url: "/about/team" },
+      { title: "About", url: "/#" },
+      { title: "Team", url: "/#" },
     ],
   },
-
   {
     title: "Our Pillars",
     url: "/our-pillars",
@@ -50,14 +49,13 @@ const navMenuItems: MenuItem[] = [
   },
   { title: "Services", url: "/services" },
   {
-    title: "Insight",
-    url: "/insight",
+    title: "Insights",
+    url: "/insights",
     items: [
-      { title: "News", url: "/#" },
-      { title: "Impact Report", url: "/impact-report" },
+      { title: "News", url: "/insights" },
+      { title: "Case Study", url: "/case-studies" },
     ],
   },
-
   { title: "Contact", url: "/contact" },
 ];
 
@@ -143,7 +141,7 @@ const renderDesktopMenuItem = (item: MenuItem) => {
           {item.title}
         </NavigationMenuTrigger>
         <NavigationMenuContent>
-          <ul className="grid w-[240px] md:w-[260px] p-2">
+          <ul className="grid w-[240px] md:w-[260px] p-2 bg-white rounded-md shadow-md">
             {item.items.map((subItem) => (
               <ListItem key={subItem.title} title={subItem.title} href={subItem.url} />
             ))}

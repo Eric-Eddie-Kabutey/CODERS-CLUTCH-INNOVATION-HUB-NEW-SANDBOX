@@ -1,6 +1,6 @@
 import React from "react";
 
-function InsightsHero() {
+function ToolsHero() {
   return (
     <section className="w-full bg-[#f3fef2] py-24 lg:py-32 flex items-center justify-center relative overflow-hidden">
       {/* Background Elements */}
@@ -18,7 +18,7 @@ function InsightsHero() {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-green-200 mb-8">
             <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
-            <span className="text-sm font-medium text-green-800">For Non-Tech Founders</span>
+            <span className="text-sm font-medium text-green-800">Essential Resources</span>
           </div>
 
           {/* Heading */}
@@ -26,42 +26,23 @@ function InsightsHero() {
             The Founder&apos;s
             <br />
             <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
-              Compass
+              Toolbox
             </span>
           </h1>
 
           {/* Subheading */}
           <p className="mt-8 text-xl sm:text-2xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            Strategic insights and actionable guidance designed specifically to help{" "}
+            We have created powerful tools to help you{" "}
             <span className="font-bold text-gray-900 bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
-              Non-Tech Founders
+              build, innovate and scale
             </span>{" "}
-            navigate the complex journey of building high-growth tech companies.
+            as a non-tech founder.
           </p>
 
-          {/* CTA Section */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 hover:from-green-700 hover:to-emerald-700">
-              Join the Newsletter
-            </button>
-            <div className="flex items-center text-gray-600">
-              <div className="flex -space-x-2 mr-3">
-                {[1, 2, 3, 4].map((item) => (
-                  <div
-                    key={item}
-                    className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full border-2 border-white shadow-sm"
-                  ></div>
-                ))}
-              </div>
-              <span className="text-sm font-medium">Join 2,000+ founders already navigating with us</span>
-            </div>
-          </div>
-
-         
         </div>
       </div>
     </section>
   );
 }
 
-export default InsightsHero;
+export default ToolsHero;
