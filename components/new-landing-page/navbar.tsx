@@ -20,6 +20,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
+// Menu item type
 interface MenuItem {
   title: string;
   url: string;
@@ -27,12 +28,13 @@ interface MenuItem {
   items?: MenuItem[];
 }
 
+// ✅ Updated menu items
 const navMenuItems: MenuItem[] = [
   {
     title: "About",
-    url: "/#",
+    url: "/about",
     items: [
-      { title: "About", url: "/#" },
+      { title: "About", url: "/about" },
       { title: "Team", url: "/#" },
     ],
   },
@@ -54,23 +56,25 @@ const navMenuItems: MenuItem[] = [
     items: [
       { title: "News", url: "/insights" },
       { title: "Case Study", url: "/case-studies" },
+      { title: "Tools", url: "/tools" }, // ✅ Added Tools
     ],
   },
   { title: "Contact", url: "/contact" },
 ];
 
+// Default logo
 const defaultLogo = {
   url: "/",
   src: "/BlueSpace-BIH-1.png",
   alt: "Bluespace Innovation Hub Logo",
 };
 
+// ✅ Navbar Component
 const NewNavbar: React.FC = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
     <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-full max-w-[1200px] rounded-xl border bg-white shadow-md">
-      {/* Navbar Container */}
       <div className="flex items-center justify-between h-20 px-6 md:px-10 lg:px-12">
         {/* Logo */}
         <Link href={defaultLogo.url} className="flex items-center">
@@ -95,7 +99,7 @@ const NewNavbar: React.FC = () => {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Toggle */}
         <div className="lg:hidden">
           <button
             onClick={() => setIsMobileOpen((prev) => !prev)}
@@ -126,7 +130,9 @@ const NewNavbar: React.FC = () => {
 
 export default NewNavbar;
 
-/* ---------- helpers ---------- */
+//
+// ---------- Helper Components ----------
+//
 
 const renderDesktopMenuItem = (item: MenuItem) => {
   const linkClassName =
