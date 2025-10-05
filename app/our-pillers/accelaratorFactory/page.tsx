@@ -1,3 +1,4 @@
+import NewFooter from "@/components/new-landing-page/NewFooter";
 import AcceleratorProgramsSection from "@/components/pills/AcceleratorProgramsSection";
 import HeroSectionPill from "@/components/pills/HeroSectionPill";
 import ImageGallerySection from "@/components/pills/ImageGallerySection";
@@ -137,6 +138,7 @@ const page = () => {
       <AcceleratorProgramsSection />
       <PortfolioStartupsSection />
       <YouTubeEmbedSection />
+      <NewFooter />
     </div>
   );
 };

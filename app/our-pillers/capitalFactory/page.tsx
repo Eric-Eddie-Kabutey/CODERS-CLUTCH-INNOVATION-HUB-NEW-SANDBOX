@@ -1,3 +1,4 @@
+import NewFooter from "@/components/new-landing-page/NewFooter";
 import DemoRequestForm from "@/components/pills/DemoRequestForm";
 import HeroSectionPill from "@/components/pills/HeroSectionPill";
 import React from "react";
@@ -64,6 +65,7 @@ const page = () => {
         </div>
       </div>
       <DemoRequestForm />
+      <NewFooter />
     </div>
   );
 };

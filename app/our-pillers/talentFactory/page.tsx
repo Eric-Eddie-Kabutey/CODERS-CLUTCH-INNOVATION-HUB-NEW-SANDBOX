@@ -1,3 +1,4 @@
+import NewFooter from "@/components/new-landing-page/NewFooter";
 import DigitalTalentSection from "@/components/pills/DigitalTalentSection";
 import HeroSectionPill from "@/components/pills/HeroSectionPill";
 import ImageGallerySection from "@/components/pills/ImageGallerySection";
@@ -58,6 +59,7 @@ const page = () => {
       </div>
       <ImageGallerySection galleryImages={galleryImages} />
       <TalentFactorySection />
+      <NewFooter />
     </div>
   );
 };

@@ -40,14 +40,13 @@ const navMenuItems: MenuItem[] = [
   },
   {
     title: "Our Pillars",
-    url: "/our-pillars",
+    url: "",
     items: [
-      { title: "CodeFACTORY", url: "/our-pillars/code-factory" },
-      { title: "TalentFACTORY", url: "/our-pillars/talent-factory" },
-      { title: "CapitalFACTORY", url: "/our-pillars/capital-factory" },
-      { title: "DigitalFACTORY", url: "/our-pillars/digital-factory" },
-      { title: "AcceleratorFACTORY", url: "/our-pillars/accelerator-factory" },
-    ],
+  { title: "CapitalFACTORY", url: "/our-pillers/capitalFactory" },
+  { title: "CodeFACTORY", url: "/our-pillers/code-factory" },
+  { title: "DigitalFACTORY", url: "/our-pillers/digitalFactory" },
+  { title: "TalentFACTORY", url: "/our-pillers/talentFactory" },
+  ],
   },
   { title: "Services", url: "/services" },
   {

@@ -1,3 +1,4 @@
+import NewFooter from "@/components/new-landing-page/NewFooter";
 import DemoDaySection from "@/components/pills/DemoDaySection";
 import DemoRequestForm from "@/components/pills/DemoRequestForm";
 import HeroSectionPill from "@/components/pills/HeroSectionPill";
@@ -49,6 +50,7 @@ const page = () => {
       <DemoDaySection />
       <ImageGallerySection galleryImages={galleryImages} />
       <DemoRequestForm />
+      <NewFooter />
     </div>
   );
 };
